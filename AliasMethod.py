@@ -15,7 +15,7 @@ def alias_setup(probs):
     :param probs: 某个概率分布
     :return: Alias数组与Prob数组
     '''
-    K =len(probs)
+    K =len(probs) # K为类别数目
     q =np.zeros(K) #对应Prob数组
     J =np.zeros(K,dtype=np.int) #对应Alias数组
 
