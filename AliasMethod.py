@@ -7,6 +7,7 @@ __author__ = 'ScarlettZero'
 
 import numpy as np
 import pandas as pd
+import numpy.random as npr
 
 def alias_setup(probs):
     '''
@@ -59,3 +60,5 @@ def alias_draw(J,q):
     # Draw from the overall uniform mixture.
     kk = int(np.floor(npr.rand()*K)) #随机取一列
 
+    # Draw from the binary mixture, either keeping the small one, or choosing the associated larger one.
+    

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/AliasMethod.py" line="32" mnemonic="3" />
+    <bookmark url="file://$PROJECT_DIR$/AliasMethod.py" line="33" mnemonic="3" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="23840353-cc85-4e6c-81dc-fb2b251fd446" name="Default" comment="" />
@@ -56,8 +56,8 @@
       <file leaf-file-name="AliasMethod.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/AliasMethod.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="59" column="43" lean-forward="false" selection-start-line="59" selection-start-column="43" selection-end-line="59" selection-end-column="43" />
+            <state relative-caret-position="586">
+              <caret line="63" column="4" lean-forward="false" selection-start-line="63" selection-start-column="4" selection-end-line="63" selection-end-column="4" />
               <folding>
                 <element signature="e#105#123#0" expanded="true" />
               </folding>
@@ -502,8 +502,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/AliasMethod.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="59" column="43" lean-forward="false" selection-start-line="59" selection-start-column="43" selection-end-line="59" selection-end-column="43" />
+        <state relative-caret-position="586">
+          <caret line="63" column="4" lean-forward="false" selection-start-line="63" selection-start-column="4" selection-end-line="63" selection-end-column="4" />
           <folding>
             <element signature="e#105#123#0" expanded="true" />
           </folding>
