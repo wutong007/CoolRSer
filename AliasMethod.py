@@ -35,5 +35,17 @@ def alias_setup(probs):
 
     #通过拼凑，将各个类别都凑为1
     while len(smaller) >0 and len(larger) >0:
-        
+        small =smaller.pop()
+        large =larger.pop()
+
+        J[small] =large #填充Alias数组
+        q[large] =q[large]-(1.0 - q[small]) #将大的分到小的上
+
+        if q[large] <1.0:
+            smaller.append(large)
+        else:
+            larger.append(large)
+    return J,q
+
+
 
