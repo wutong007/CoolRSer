@@ -47,5 +47,12 @@ def alias_setup(probs):
             larger.append(large)
     return J,q
 
+def alias_draw(J,q):
+    '''
+
+    :param J: Prob数组
+    :param q:
+    :return:
+    '''
 
 
