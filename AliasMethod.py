@@ -24,6 +24,16 @@ def alias_setup(probs):
     larger =[] #存储比1大的列
 
     for kk,prob in enumerate(probs):
-        
+        q[kk] =K*prob #概率
+        if q[kk] <1.0:
+            smaller.append(kk)
+        else:
+            larger.append(kk)
 
+    # Loop though and create little binary mixtures that appropriately allocate
+    # the larger outcomes over the overall uniform mixture.
+
+    #通过拼凑，将各个类别都凑为1
+    while len(smaller) >0 and len(larger) >0:
+        
 
