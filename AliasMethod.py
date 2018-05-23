@@ -50,9 +50,12 @@ def alias_setup(probs):
 def alias_draw(J,q):
     '''
 
-    :param J: Prob数组
-    :param q:
-    :return:
+    :param J: Alias数组
+    :param q: Prob数组
+    :return:一次采样结果
     '''
+    K=len(J)
 
+    # Draw from the overall uniform mixture.
+    kk = int(np.floor(npr.rand()*K)) #随机取一列
 
