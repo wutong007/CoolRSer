@@ -61,4 +61,4 @@ def alias_draw(J,q):
     kk = int(np.floor(npr.rand()*K)) #随机取一列
 
     # Draw from the binary mixture, either keeping the small one, or choosing the associated larger one.
-    
+
