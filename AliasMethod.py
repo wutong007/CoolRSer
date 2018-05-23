@@ -21,12 +21,12 @@ def alias_setup(probs):
 
     #Sort the data into the outcomes with probabilities
     #that are larger and smaller than 1/K
-    smaller =[] #存储比1小的列
-    larger =[] #存储比1大的列
+    smaller =[] # 存储比1小的列
+    larger =[] # 存储比1大的列
 
     for kk,prob in enumerate(probs):
-        q[kk] =K*prob #概率
-        if q[kk] <1.0:
+        Prob[kk] =K*prob # 概率
+        if Prob[kk] <1.0:
             smaller.append(kk)
         else:
             larger.append(kk)
@@ -40,15 +40,15 @@ def alias_setup(probs):
         large =larger.pop()
 
         J[small] =large #填充Alias数组
-        q[large] =q[large]-(1.0 - q[small]) #将大的分到小的上
+        Prob[large] =Prob[large]-(1.0 - Prob[small]) #将大的分到小的上
 
-        if q[large] <1.0:
+        if Prob[large] <1.0:
             smaller.append(large)
         else:
             larger.append(large)
-    return J,q
+    return J,Prob
 
-def alias_draw(J,q):
+def alias_draw(J,Prob):
     '''
 
     :param J: Alias数组
@@ -61,7 +61,7 @@ def alias_draw(J,q):
     kk = int(np.floor(npr.rand()*K)) #随机取一列
 
     # Draw from the binary mixture, either keeping the small one, or choosing the associated larger one.
-    if npr.rand() <q[kk]: #比较
+    if npr.rand() <Prob[kk]: #比较
         return kk
     else:
         return J[kk]
@@ -73,9 +73,9 @@ N=100
 probs =npr.dirichlet(np.ones(K),1).ravel() # .ravel(): 将多维数组降为一维
 
 # Construct the table
-J,q = alias_setup(probs)
+J,Prob = alias_setup(probs)
 
 # Generate variates.
 X = np.zeros(N)
 for nn in range(N):
-    X[nn] = alias_draw(J,q)
+    X[nn] = alias_draw(J,Prob)
