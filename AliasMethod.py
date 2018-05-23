@@ -61,4 +61,13 @@ def alias_draw(J,q):
     kk = int(np.floor(npr.rand()*K)) #随机取一列
 
     # Draw from the binary mixture, either keeping the small one, or choosing the associated larger one.
+    if npr.rand() <q[kk]: #比较
+        return kk
+    else:
+        return J[kk]
 
+K=5
+N=100
+
+# Get a random probability vector.
+probs =npr.dirichlet(np.ones(K),1).ravel()
