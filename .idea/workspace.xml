@@ -58,7 +58,7 @@
         <entry file="file://$PROJECT_DIR$/AliasMethod.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="146">
-              <caret line="64" column="8" lean-forward="false" selection-start-line="64" selection-start-column="8" selection-end-line="64" selection-end-column="8" />
+              <caret line="64" column="44" lean-forward="false" selection-start-line="64" selection-start-column="44" selection-end-line="64" selection-end-column="44" />
               <folding>
                 <element signature="e#105#123#0" expanded="true" />
               </folding>
@@ -524,7 +524,7 @@
     <entry file="file://$PROJECT_DIR$/AliasMethod.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="146">
-          <caret line="64" column="8" lean-forward="false" selection-start-line="64" selection-start-column="8" selection-end-line="64" selection-end-column="8" />
+          <caret line="64" column="44" lean-forward="false" selection-start-line="64" selection-start-column="44" selection-end-line="64" selection-end-column="44" />
           <folding>
             <element signature="e#105#123#0" expanded="true" />
           </folding>

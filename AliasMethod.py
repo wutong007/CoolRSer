@@ -62,7 +62,7 @@ def alias_draw(Alias,Prob):
 
     # Draw from the binary mixture, either keeping the small one, or choosing the associated larger one.
     # 采样过程：随机取某一列k（即[1,4]的随机整数，再随机产生一个[0-1]的小数c，）
-    # 如果
+    # 如果Prob[kk]大于c，那么采样结果就是k,反之则为：Alias[kk]
     if npr.rand() <Prob[kk]: #比较
         return kk
     else:
