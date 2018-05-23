@@ -16,8 +16,8 @@ def alias_setup(probs):
     :return: Alias数组与Prob数组
     '''
     K =len(probs) # K为类别数目
-    q =np.zeros(K) #对应Prob数组
-    J =np.zeros(K,dtype=np.int) #对应Alias数组
+    Prob =np.zeros(K) # 对应Prob数组：落在原类型的概率
+    Alias =np.zeros(K,dtype=np.int) # 对应Alias数组：每一列第二层的类型
 
     #Sort the data into the outcomes with probabilities
     #that are larger and smaller than 1/K
@@ -35,7 +35,7 @@ def alias_setup(probs):
     # the larger outcomes over the overall uniform mixture.
 
     #通过拼凑，将各个类别都凑为1
-    while len(smaller) >0 and len(larger) >0:
+    while len(smaller) > 0 and len(larger) > 0:
         small =smaller.pop()
         large =larger.pop()
 
