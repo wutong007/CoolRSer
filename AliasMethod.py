@@ -39,32 +39,34 @@ def alias_setup(probs):
         small =smaller.pop()
         large =larger.pop()
 
-        J[small] =large #填充Alias数组
+        Alias[small] =large #填充Alias数组
         Prob[large] =Prob[large]-(1.0 - Prob[small]) #将大的分到小的上
 
         if Prob[large] <1.0:
             smaller.append(large)
         else:
             larger.append(large)
-    return J,Prob
+    return Alias,Prob
 
-def alias_draw(J,Prob):
+def alias_draw(Alias,Prob):
     '''
 
     :param J: Alias数组
     :param q: Prob数组
     :return:一次采样结果
     '''
-    K=len(J)
+    K=len(Alias)
 
     # Draw from the overall uniform mixture.
     kk = int(np.floor(npr.rand()*K)) #随机取一列
 
     # Draw from the binary mixture, either keeping the small one, or choosing the associated larger one.
+    # 采样过程：随机取某一列k（即[1,4]的随机整数，再随机产生一个[0-1]的小数c，）
+    # 如果
     if npr.rand() <Prob[kk]: #比较
         return kk
     else:
-        return J[kk]
+        return Alias[kk]
 
 K=5
 N=100
@@ -73,9 +75,9 @@ N=100
 probs =npr.dirichlet(np.ones(K),1).ravel() # .ravel(): 将多维数组降为一维
 
 # Construct the table
-J,Prob = alias_setup(probs)
+Alias,Prob = alias_setup(probs)
 
 # Generate variates.
 X = np.zeros(N)
 for nn in range(N):
-    X[nn] = alias_draw(J,Prob)
+    X[nn] = alias_draw(Alias,Prob)
