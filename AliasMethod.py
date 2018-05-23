@@ -70,4 +70,12 @@ K=5
 N=100
 
 # Get a random probability vector.
-probs =npr.dirichlet(np.ones(K),1).ravel()
+probs =npr.dirichlet(np.ones(K),1).ravel() # .ravel(): 将多维数组降为一维
+
+# Construct the table
+J,q = alias_setup(probs)
+
+# Generate variates.
+X = np.zeros(N)
+for nn in range(N):
+    X[nn] = alias_draw(J,q)
