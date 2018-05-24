@@ -76,6 +76,9 @@ probs =npr.dirichlet(np.ones(K),1).ravel() # .ravel(): 将多维数组降为一�
 
 # Construct the table
 Alias,Prob = alias_setup(probs)
+print("Prob is :",Prob)
+print("Alias is :",Alias)
+
 
 # Generate variates.
 X = np.zeros(N)
