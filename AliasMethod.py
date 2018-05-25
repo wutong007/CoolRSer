@@ -68,7 +68,7 @@ def alias_draw(Alias,Prob):
     else:
         return Alias[kk]
 
-K=5
+K=5 #K初始化为5类
 N=100
 
 # Get a random probability vector.
