@@ -80,7 +80,7 @@ print("Prob is :",Prob)
 print("Alias is :",Alias)
 # Prob is : [ 0.25058826  0.69258202  0.83010441  0.87901003  1.        ]
 # Alias is : [4 4 4 4 0]
-####
+######
 
 # Generate variates.
 X = np.zeros(N)
