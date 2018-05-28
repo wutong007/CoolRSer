@@ -71,11 +71,11 @@ def alias_draw(Alias,Prob):
 
 if __name__ == '__main__':
     K = 5  # K初始化为5类
-    N = 100
+    N = 5
 
     # Get a random probability vector.
-    probs = npr.dirichlet(np.ones(K), 1).ravel()  # .ravel(): 将多维数组降为一维
-
+    # probs = npr.dirichlet(np.ones(K), 1).ravel()  # .ravel(): 将多维数组降为一维
+    probs =[0.2,0.3,0.1,0.2,0.2]
     # Construct the table
     Alias, Prob = alias_setup(probs)
 
@@ -87,3 +87,4 @@ if __name__ == '__main__':
     X = np.zeros(N)
     for nn in range(N):
         X[nn] = alias_draw(Alias, Prob)
+    print("最终的采样结果X为：",X)
