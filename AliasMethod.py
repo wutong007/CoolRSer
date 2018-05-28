@@ -5,6 +5,7 @@ __author__ = 'ScarlettZero'
 # 20180522
 # AliasMethod Sampling
 
+import time
 import numpy as np
 import pandas as pd
 import numpy.random as npr
@@ -70,6 +71,8 @@ def alias_draw(Alias,Prob):
         return Alias[kk]
 
 if __name__ == '__main__':
+    start=time.time()
+
     K = 5  # K初始化为5类
     N = 5
 
@@ -84,7 +87,11 @@ if __name__ == '__main__':
     ######
 
     # Generate variates.
+    # X 为有多少样本需要采样
     X = np.zeros(N)
     for nn in range(N):
         X[nn] = alias_draw(Alias, Prob)
     print("最终的采样结果X为：",X)
+    end=time.time()
+    spend=end-start
+    print("耗时为：%0.4f s"%spend)
