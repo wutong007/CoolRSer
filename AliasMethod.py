@@ -25,8 +25,8 @@ def alias_setup(probs):
     larger =[] # 存储比1大的列
 
     for kk,prob in enumerate(probs):
-        Prob[kk] =K*prob # 概率
-        if Prob[kk] <1.0:
+        Prob[kk] =K*prob # 概率（每个类别概率乘以K，使得总和为K）
+        if Prob[kk] <1.0: # 然后分为两类：大于1的和小于1的
             smaller.append(kk)
         else:
             larger.append(kk)
