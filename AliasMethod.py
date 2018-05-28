@@ -92,6 +92,7 @@ if __name__ == '__main__':
     for nn in range(N):
         X[nn] = alias_draw(Alias, Prob)
     print("最终的采样结果X为：",X)
+
     end=time.time()
     spend=end-start
     print("耗时为：%0.4f s"%spend)
