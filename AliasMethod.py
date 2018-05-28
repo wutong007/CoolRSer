@@ -36,11 +36,11 @@ def alias_setup(probs):
 
     #通过拼凑，将各个类别都凑为1
     while len(smaller) > 0 and len(larger) > 0:
-        small =smaller.pop()
-        large =larger.pop()
+        small = smaller.pop()
+        large = larger.pop()
 
-        Alias[small] =large #填充Alias数组
-        Prob[large] =Prob[large]-(1.0 - Prob[small]) #将大的分到小的上
+        Alias[small] = large #填充Alias数组
+        Prob[large] = Prob[large]-(1.0 - Prob[small]) #将大的分到小的上
 
         if Prob[large] <1.0:
             smaller.append(large)
@@ -50,7 +50,6 @@ def alias_setup(probs):
 
 def alias_draw(Alias,Prob):
     '''
-
     :param J: Alias数组
     :param q: Prob数组
     :return:一次采样结果
