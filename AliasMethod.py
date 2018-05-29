@@ -96,3 +96,6 @@ if __name__ == '__main__':
     end=time.time()
     spend=end-start
     print("耗时为：%0.4f s"%spend)
+
+    sure_k = np.random.choice(5, 1, p=probs)
+    print("surek为：",sure_k)
