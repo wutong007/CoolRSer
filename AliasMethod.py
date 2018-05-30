@@ -99,3 +99,5 @@ if __name__ == '__main__':
 
     sure_k = np.random.choice(5, 1, p=probs)
     print("surek为：",sure_k)
+
+    # Alias必须是多次采样才有效率上的提升的。如果每一次sample都新来一次alias那是没有用的
