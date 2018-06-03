@@ -99,5 +99,6 @@ if __name__ == '__main__':
 
     sure_k = np.random.choice(5, 1, p=probs)
     print("surek为：",sure_k)
-    # 关于SEM的并行，我先尝试了在 sample k 的时候使用Alias Method，但是和之前比效率方面没见得有提升（之前SEM是利用  sure_k = np.random.choice(aspects_num, 1, p=p) 进行sample k的）
-    # Alias必须是多次采样才有效率上的提升的。如果每一次sample都新来一次alias那是没有用的
+    # 关于SEM的并行，我先尝试了在 sample k 的时候使用Alias Method，但是和之前比效率方面没见得有提升
+    # （之前SEM是利用  sure_k = np.random.choice(aspects_num, 1, p=p) 进行sample k的）
+    # —— Alias必须是多次采样才有效率上的提升的。如果每一次sample都新来一次alias那是没有用的
